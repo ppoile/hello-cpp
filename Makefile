@@ -2,16 +2,16 @@ BIN = $(DESTDIR)/usr/bin
 
 .PHONY: all clean distclean install
 
-all: hello
+all: hello-cpp
 
-hello:
-	g++ -o hello hello.cpp
+hello-cpp:
+	g++ -o hello-cpp hello.cpp
 
 clean: distclean
 
 distclean:
-	rm -f hello
+	rm -f hello-cpp
 
 install: all
 	install -d $(BIN)
-	install ./hello $(BIN)
+	install ./hello-cpp $(BIN)
