@@ -5,7 +5,7 @@ BIN = $(DESTDIR)/usr/bin
 all: hello-cpp
 
 hello-cpp:
-	g++ -o hello-cpp hello.cpp
+	$(CXX) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o hello-cpp hello.cpp
 
 clean: distclean
 
