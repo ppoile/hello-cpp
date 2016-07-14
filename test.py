@@ -9,5 +9,11 @@ class Test(unittest.TestCase):
             subprocess.check_output(["./hello-cpp"]),
             "Hello world.\n")
 
+    def test_help_response(self):
+        """test the program's help"""
+        self.assertEqual(
+            subprocess.check_output(["./hello-cpp", "--help"]),
+            "Hello world.\n")
+
 if __name__ == '__main__':
     unittest.main()
