@@ -7,7 +7,6 @@ hello-cpp:
 
 test: hello-cpp
 	python ./test.py
-	cppcheck .
 
 clean: distclean
 
